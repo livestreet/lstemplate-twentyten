@@ -279,8 +279,8 @@ p { margin-bottom: 18px; }
 .block ul a { font: 12px Georgia, serif; text-decoration: none; }
 .block ul a:hover { text-decoration: underline; }
 
-.block .bottom { padding-top: 5px; font-size: 11px; }
-.block .bottom a { color: #333; }
+.block .bottom { margin-top: 5px; }
+.block .bottom a { margin-left: 15px; font: 12px Georgia, serif; color: #390; }
 
 /* Stream */
 .block.stream ul.list { border-top: 1px dashed #ddd; }
@@ -292,7 +292,6 @@ p { margin-bottom: 18px; }
 /* Meta */
 .block.meta .message-new { color: #5fb501; }
 .block.meta .create { color: #390; }
-
 
 /* Top Blogs */
 .block.blogs ul.list { border-top: 1px dashed #ddd; }

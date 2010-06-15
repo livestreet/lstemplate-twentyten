@@ -27,14 +27,6 @@
 
 
 <div id="header">
-	{*<div class="profile">
-		{if $oUserCurrent}
-		{else}
-			
-		{/if}
-	</div>*}
-
-	
 	<h1><a href="{cfg name='path.root.web'}">Livestreet Blog</a></h1>
 	<h2>{cfg name="view.name"}</h2>
 </div>
