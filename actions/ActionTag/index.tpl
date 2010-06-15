@@ -11,7 +11,7 @@ function submitTags(sTag) {
 {/literal}
 
 
-<form action="" method="GET" onsubmit="return submitTags(this.tag.value);">
+<form action="" method="GET" onsubmit="return submitTags(this.tag.value);" class="tag-search">
 	<input type="text" name="tag" value="{$sTag|escape:'html'}" />
 </form>
 <br />

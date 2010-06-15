@@ -19,6 +19,9 @@ return array(
 	'comment_says' => 'написал',
 	'topic_tags' => 'Теги',
 	'topic_author_topics' => 'Показать все топики этого автора',
+	'about_author' => 'Об авторе',
+	'author_nickname' => 'Никнейм',
+	'author_topics' => 'Архив автора',
 );
 
 ?>

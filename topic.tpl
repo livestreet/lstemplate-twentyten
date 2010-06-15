@@ -13,7 +13,7 @@
 	</h2>
 	
 	
-	<p class="info-short">{$aLang.topic_pub} <a href="{if $oTopic->getType()=='link'}{router page='link'}go/{$oTopic->getId()}/{else}{$oTopic->getUrl()}{/if}" class="title-topic" title="{date_format date=$oTopic->getDateAdd() format="H:i"}">{date_format date=$oTopic->getDateAdd() format="j F Y"}</a> {$aLang.topic_by} <a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></p>
+	<p class="info-short">{$aLang.topic_pub} <a href="{if $oTopic->getType()=='link'}{router page='link'}go/{$oTopic->getId()}/{else}{$oTopic->getUrl()}{/if}" class="title-topic" title="{date_format date=$oTopic->getDateAdd() format="H:i"}">{date_format date=$oTopic->getDateAdd() format="j F Y"}</a> {$aLang.topic_by} <a href="{router page='my'}{$oUser->getLogin()}/">{$oUser->getLogin()}</a></p>
 	
 	
 	<ul class="actions">									
@@ -46,7 +46,20 @@
 			</div>
 		{/if}
 
-		{$oTopic->getText()}
+		{if !$tSingle}
+			{$oTopic->getTextShort()}
+			{if $oTopic->getTextShort()!=$oTopic->getText()}
+				<a href="{$oTopic->getUrl()}" title="{$aLang.topic_read_more}">
+				{if $oTopic->getCutText()}
+					{$oTopic->getCutText()}
+				{else}
+					{$aLang.topic_read_more}
+				{/if}      			
+				</a>
+			{/if}
+		{else}
+			{$oTopic->getText()}
+		{/if}
 	</div>	
 	
 	
@@ -54,7 +67,7 @@
 	{if $tSingle}
 		<div class="author-info">
 			<a href="{$oUser->getUserWebPath()}"><img src="{$oUser->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>
-			<strong>Об авторе {$oUser->getProfileName()}</strong><br />
+			<strong>{$aLang.about_author} {$oUser->getProfileName()}</strong><br />
 			{$oUser->getProfileAbout()}<br />
 			<a href="{router page='my'}{$oUser->getLogin()}/">{$aLang.topic_author_topics} &rarr;</a>
 		</div>
@@ -69,14 +82,11 @@
 				<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}">{$aLang.topic_comments}: 
 				{if $oTopic->getCountComment()>0}
 					{$oTopic->getCountComment()} <span>{if $oTopic->getCountCommentNew()}+{$oTopic->getCountCommentNew()}{/if}</span>
-				{else}
-					0
-				{/if}
-			</span>
+				{else}0{/if}</a></span>
 		{/if}
-		{* <a href="#" onclick="lsFavourite.toggle({$oTopic->getId()},this,'topic'); return false;" class="favorite {if $oUserCurrent}{if $oTopic->getIsFavourite()}active{/if}{else}fav-guest{/if}"></a> *}
+
 		{if $oTopic->getType()=='link'}
-			<a href="{router page='link'}go/{$oTopic->getId()}/" title="{$aLang.topic_link_count_jump}: {$oTopic->getLinkCountJump()}">{$oTopic->getLinkUrl(true)}</a>
+			&nbsp;<a href="{router page='link'}go/{$oTopic->getId()}/" title="{$aLang.topic_link_count_jump} {$oTopic->getLinkCountJump()}" class="link">{$oTopic->getLinkUrl(true)}</a>
 		{/if}
 		
 		{if $tSingle}

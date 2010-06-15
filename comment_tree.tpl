@@ -13,7 +13,7 @@
 		<h3>{$aLang.comment_title} (<span id="count-comments">{$iCountComment}</span>)</h3>
 		<a name="comments" ></a>
 		{if $sTargetType=='topic'}
-			<a href="{router page='rss'}comments/{$iTargetId}/">rss</a>
+			<a href="{router page='rss'}comments/{$iTargetId}/" class="rss">rss</a>
 		{/if}
 		<a href="#" onclick="lsCmtTree.collapseNodeAll(); return false;" onfocus="blur();">{$aLang.comment_collapse}</a> /
 		<a href="#" onclick="lsCmtTree.expandNodeAll(); return false;" onfocus="blur();">{$aLang.comment_expand}</a>

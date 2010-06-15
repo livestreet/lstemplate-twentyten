@@ -29,18 +29,8 @@
 <div id="header">
 	{*<div class="profile">
 		{if $oUserCurrent}
-			<a href="{$oUserCurrent->getUserWebPath()}" class="username">{$oUserCurrent->getLogin()}</a> |
-			<a href="{router page='topic'}add/" class="create">{$aLang.topic_create}</a> |
-			{if $iUserCurrentCountTalkNew}
-				<a href="{router page='talk'}" class="message-new" id="new_messages" title="{$aLang.user_privat_messages_new}">{$aLang.user_privat_messages} ({$iUserCurrentCountTalkNew})</a>  |
-			{else}
-				<a href="{router page='talk'}" id="new_messages">{$aLang.user_privat_messages} ({$iUserCurrentCountTalkNew})</a> |
-			{/if}
-			<a href="{router page='settings'}profile/">{$aLang.user_settings}</a> |
-			<a href="{router page='login'}exit/?security_ls_key={$LIVESTREET_SECURITY_KEY}">{$aLang.exit}</a>
 		{else}
-			<a href="{router page='login'}" onclick="showLoginForm(); return false;">{$aLang.user_login_submit}</a> |
-			<a href="{router page='registration'}">{$aLang.registration_submit}</a>
+			
 		{/if}
 	</div>*}
 

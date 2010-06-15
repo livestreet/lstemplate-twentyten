@@ -1,4 +1,4 @@
-{include file='header.tpl' menu='topic_action'}
+{include file='header.tpl' menu='topic_action' sNav=true}
 
 
 {literal}

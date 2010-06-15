@@ -4,7 +4,7 @@
 
 
 <div class="blog">
-	<h2><img src="{$oBlog->getAvatarPath(24)}" alt="avatar" class="avatar" /> {$oBlog->getTitle()|escape:'html'}</h2>
+	<h2>{$oBlog->getTitle()|escape:'html'}</h2>
 	
 	<ul class="actions">
 		<li><a href="{router page='rss'}blog/{$oBlog->getUrl()}/" class="rss">Rss</a></li>
@@ -38,40 +38,7 @@
 		{/if}
 	</ul>
 	
-	
-	
-	<p>{$oBlog->getDescription()|nl2br}</p>			
-	
-	<strong>{$aLang.blog_user_administrators} ({$iCountBlogAdministrators}):</strong>							
-	<a href="{$oUserOwner->getUserWebPath()}" class="user">{$oUserOwner->getLogin()}</a>
-	{if $aBlogAdministrators}			
-		{foreach from=$aBlogAdministrators item=oBlogUser}
-			{assign var="oUser" value=$oBlogUser->getUser()}  									
-			<a href="{$oUser->getUserWebPath()}" class="user">{$oUser->getLogin()}</a>
-		{/foreach}	
-	{/if}<br />		
-
-	
-	<strong>{$aLang.blog_user_moderators} ({$iCountBlogModerators}):</strong>
-	{if $aBlogModerators}						
-		{foreach from=$aBlogModerators item=oBlogUser}  
-		{assign var="oUser" value=$oBlogUser->getUser()}									
-			<a href="{$oUser->getUserWebPath()}" class="user">{$oUser->getLogin()}</a>
-		{/foreach}							
-	{else}
-		{$aLang.blog_user_moderators_empty}
-	{/if}<br />
-	
-	
-	<strong>{$aLang.blog_user_readers} ({$iCountBlogUsers}):</strong>
-	{if $aBlogUsers}
-		{foreach from=$aBlogUsers item=oBlogUser}
-		{assign var="oUser" value=$oBlogUser->getUser()}
-			<a href="{$oUser->getUserWebPath()}" class="user">{$oUser->getLogin()}</a>
-		{/foreach}
-	{else}
-		{$aLang.blog_user_readers_empty}
-	{/if}		
+	<p>{$oBlog->getDescription()|nl2br}</p>	
 </div>
 
 
