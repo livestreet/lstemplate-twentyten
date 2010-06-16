@@ -12,7 +12,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 { font: normal 18px Arial, Sans-Serif; color: #333; }
 h1 { font-size: 22px; line-height: 26px; margin-bottom: 10px; }
-h2 { font-size: 22px; line-height: 26px; margin-bottom: 7px; }
+h2 { font-size: 24px; line-height: 26px; margin-bottom: 7px; font-weight: bold; }
 h3 { font-size: 18px; line-height: 22px; margin-bottom: 5px; }
 h4 { font-size: 14px; line-height: 18px; margin-bottom: 15px; font-weight: bold; }
 h5 { font-size: 16px; line-height: 20px; margin-bottom: 5px; }
@@ -175,11 +175,14 @@ p { margin-bottom: 18px; }
 -------------------------------------------------------------- */
 .pages { clear: both; padding: 0 10px; height: 40px; background: #000; position: relative; z-index: 200; }
 .pages li { float: left; position: relative; }
-.pages li a { float: left; color: #ccc; text-decoration: none; padding: 10px 10px 11px; }
+.pages li a { display: block; color: #ccc; text-decoration: none; padding: 10px 10px 11px; }
 .pages li a:hover { color: #fff; background: #333; }
-.pages li.active a { color: #fff; background: #222; }
-.pages li.active a { color: #fff; background: #222; }
-.pages li ul { position: absolute; top: 40px; left: 0; background: #000; }
+.pages li:hover { background: #333; }
+.pages li.active a { color: #fff; background: #333; }
+.pages ul { width: 180px; position: absolute; top: 39px; left: 0; background: #333; display: none; }
+.pages ul li { float: none; }
+.pages ul ul { left: 100%; top: 0; display: none; }
+.pages li:hover > ul { display: block; }
 
 
 
@@ -367,8 +370,7 @@ p { margin-bottom: 18px; }
 .comment .info.view 	{ background: #cdf5a6 !important; }
 
 /* Comment List */
-.comments.comment-list .path { padding-bottom: 3px; }
-.comments.comment-list .path .blog-name { color: #777; }
+.comments.comment-list .path { padding-top: 2px; padding-bottom: 3px; font: 12px Georgia, serif; }
 
 /* Reply Form */
 .reply { padding-bottom: 25px; }

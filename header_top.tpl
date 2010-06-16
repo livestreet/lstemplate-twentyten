@@ -37,12 +37,24 @@
 
 <ul class="pages">
 	<li {if $sMenuHeadItemSelect=='index'}class="active"{/if}><a href="{router page='index'}">{$aLang.main}</a></li>					
-	<!--<li><a href="#">{$aLang.main}</a>
+	<li><a href="#">Test</a>
 		<ul>
 			<li><a href="#">Subpage</a></li>
-			<li><a href="#">Subpage</a></li>
+			<li><a href="#">Subpage</a>
+				<ul>
+					<li><a href="#">Subpage</a></li>
+					<li><a href="#">Subpage</a></li>
+					<li><a href="#">Subpage</a>
+						<ul>
+							<li><a href="#">Subpage</a></li>
+							<li><a href="#">Subpage</a></li>
+							<li><a href="#">Subpage</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
 			<li><a href="#">Subpage</a></li>
 		</ul>
-	</li>	-->				
+	</li>			
 	{hook run='main_menu'}
 </ul>
