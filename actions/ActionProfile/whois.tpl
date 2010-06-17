@@ -3,12 +3,15 @@
 {assign var="oSession" value=$oUserProfile->getSession()}
 {assign var="oVote" value=$oUserProfile->getVote()}
 			
-<div class="user-profile">
-	<img src="{$oUserProfile->getProfileAvatarPath(100)}" alt="avatar" class="avatar" />
-	<h3>{$oUserProfile->getLogin()}</h3>
-	{if $oUserProfile->getProfileName()}
-		{$oUserProfile->getProfileName()|escape:'html'}					
-	{/if}										
+			
+<div class="author-info">
+	<a href="{$oUserProfile->getUserWebPath()}"><img src="{$oUserProfile->getProfileAvatarPath(48)}" alt="avatar" class="avatar" /></a>
+	<strong>{$oUserProfile->getProfileName()}</strong><br />
+	<strong>{$aLang.author_nickname}:</strong> {$oUserProfile->getLogin()}<br />
+	{$oUserProfile->getProfileAbout()}<br /><br />
+	
+	<a href="{router page='my'}{$oUserProfile->getLogin()}/">{$aLang.user_menu_publication_blog}</a>{if $iCountTopicUser} ({$iCountTopicUser}){/if}<br />
+	<a href="{router page='my'}{$oUserProfile->getLogin()}/comment/">{$aLang.user_menu_publication_comment}</a>{if $iCountCommentUser} ({$iCountCommentUser}){/if}
 </div>
 
 

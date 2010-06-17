@@ -22,7 +22,10 @@ return array(
 	'about_author' => 'Об авторе',
 	'author_nickname' => 'Никнейм',
 	'author_topics' => 'Архив автора',
+	'author_comments' => 'Комментарии автора',
 	'block_stream_comments_all' => 'Все комментарии',
+	'user_menu_publication_blog' => 'Топики автора',
+	'user_menu_publication_comment' => 'Комментарии автора',
 );
 
 ?>
