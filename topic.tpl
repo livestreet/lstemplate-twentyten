@@ -78,6 +78,12 @@
 
 	<div class="info">
 		{$aLang.topic_pub_in} <a href="{$oBlog->getUrlFull()}" class="title-blog">{$oBlog->getTitle()|escape:'html'}</a>
+		
+		| {$aLang.topic_tags}: 
+		{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
+			<a href="{router page='tag'}{$sTag|escape:'html'}/">{$sTag|escape:'html'}</a>{if !$smarty.foreach.tags_list.last}, {/if}
+		{/foreach}	
+		
 		{if !$tSingle}
 			| <span class="comments-link">
 				<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}">{$aLang.topic_comments}: 
@@ -88,14 +94,7 @@
 
 		{if $oTopic->getType()=='link'}
 			&nbsp;<a href="{router page='link'}go/{$oTopic->getId()}/" title="{$aLang.topic_link_count_jump} {$oTopic->getLinkCountJump()}" class="link">{$oTopic->getLinkUrl(true)}</a>
-		{/if}
-		
-		{if $tSingle}
-			| {$aLang.topic_tags}: 
-			{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
-				<a href="{router page='tag'}{$sTag|escape:'html'}/">{$sTag|escape:'html'}</a>{if !$smarty.foreach.tags_list.last}, {/if}
-			{/foreach}								
-		{/if}
+		{/if}							
 		
 		{hook run='topic_show_info' topic=$oTopic}
 	</div>
