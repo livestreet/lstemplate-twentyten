@@ -84,6 +84,10 @@
 		{/literal}
 	{/if}
 	
+	{if $bRefreshToHome}
+		<meta  HTTP-EQUIV="Refresh" CONTENT="3; URL={cfg name='path.root.web'}/">
+	{/if}
+	
 	{hook run='html_head_end'}
 </head>
 

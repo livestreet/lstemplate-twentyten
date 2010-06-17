@@ -50,7 +50,7 @@
 		{if !$tSingle}
 			{$oTopic->getTextShort()}
 			{if $oTopic->getTextShort()!=$oTopic->getText()}
-				<a href="{$oTopic->getUrl()}" title="{$aLang.topic_read_more}">
+				<br/><a href="{$oTopic->getUrl()}" title="{$aLang.topic_read_more}">
 				{if $oTopic->getCutText()}
 					{$oTopic->getCutText()}
 				{else}
@@ -91,7 +91,7 @@
 				<a href="{$oTopic->getUrl()}#comments" title="{$aLang.topic_comment_read}">{$aLang.topic_comments}: 
 				{if $oTopic->getCountComment()>0}
 					{$oTopic->getCountComment()} <span>{if $oTopic->getCountCommentNew()}+{$oTopic->getCountCommentNew()}{/if}</span>
-				{else}0{/if}</a></span>
+				{else}{$aLang.topic_comments_no}{/if}</a></span>
 		{/if}
 
 		{if $oTopic->getType()=='link'}

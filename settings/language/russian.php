@@ -13,6 +13,7 @@ return array(
 	'people' => 'Авторы',
 	'main' => 'Главная',
 	'topic_comments' => 'Комментариев',
+	'topic_comments_no' => 'нет',
 	'topic_pub_in' => 'Опубликовано в категории',
 	'topic_pub' => 'Опубликовано',
 	'topic_by' => 'автором',

@@ -10,8 +10,8 @@
 	<strong>{$aLang.author_nickname}:</strong> {$oUserProfile->getLogin()}<br />
 	{$oUserProfile->getProfileAbout()}<br /><br />
 	
-	<a href="{router page='my'}{$oUserProfile->getLogin()}/">{$aLang.user_menu_publication_blog}</a>{if $iCountTopicUser} ({$iCountTopicUser}){/if}<br />
-	<a href="{router page='my'}{$oUserProfile->getLogin()}/comment/">{$aLang.user_menu_publication_comment}</a>{if $iCountCommentUser} ({$iCountCommentUser}){/if}
+	{if $iCountTopicUser}<a href="{router page='my'}{$oUserProfile->getLogin()}/">{$aLang.user_menu_publication_blog}</a> ({$iCountTopicUser})<br />{/if}
+	{if $iCountCommentUser}<a href="{router page='my'}{$oUserProfile->getLogin()}/comment/">{$aLang.user_menu_publication_comment}</a> ({$iCountCommentUser}){/if}
 </div>
 
 
