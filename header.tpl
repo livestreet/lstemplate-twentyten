@@ -99,7 +99,7 @@
 	{include file=header_top.tpl}
 
 	<div id="wrapper">
-		<div id="content" {if $noSidebar}style="width: 100%"{/if}>
+		<div id="content" {if $noSidebar}style="width: 920px; padding-right: 0pt;"{/if}>
 			{include file=header_nav.tpl}
 
 			{if !$noShowSystemMessage}

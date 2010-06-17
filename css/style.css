@@ -35,8 +35,8 @@ p { margin-bottom: 18px; }
 #header 	{ overflow: hidden; zoom: 1; padding-top: 10px; }
 #image 		{ height: 150px; background: url(../images/bg.jpg) no-repeat; border-top: 4px solid #000; }
 #wrapper 	{ overflow: hidden; zoom: 1; width: 960px; }
-#content 	{ width: 635px; float: left; padding: 40px 20px 20px; }
-#sidebar	{ width: 250px; padding: 40px 30px 0 0; float: left; }
+#content 	{ width: 660px; float: left; padding: 40px 60px 20px 20px; }
+#sidebar	{ width: 200px; padding: 40px 20px 0 0; float: left; }
 #footer 	{ overflow: hidden; zoom: 1; width: 960px; padding-top: 15px; border-top: 4px solid #000; color: #666; font: 12px/18px Georgia, serif; }
 
 
@@ -181,7 +181,7 @@ p { margin-bottom: 18px; }
 .pages li.active a { color: #fff; background: #333; }
 .pages ul { width: 180px; position: absolute; top: 39px; left: 0; background: #333; display: none; }
 .pages ul li { float: none; }
-.pages ul ul { left: 100%; top: 0; display: none; }
+.pages ul ul { left: 100%; top: 0; display: none; border-left: 1px solid #2a2a2a; }
 .pages li:hover > ul { display: block; }
 
 
