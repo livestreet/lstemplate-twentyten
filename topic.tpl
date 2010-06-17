@@ -13,7 +13,7 @@
 	</h2>
 	
 	
-	<p class="info-short">{$aLang.topic_pub} <a href="{if $oTopic->getType()=='link'}{router page='link'}go/{$oTopic->getId()}/{else}{$oTopic->getUrl()}{/if}" class="title-topic" title="{date_format date=$oTopic->getDateAdd() format="H:i"}">{date_format date=$oTopic->getDateAdd() format="j F Y"}</a> {$aLang.topic_by} <a href="{router page='my'}{$oUser->getLogin()}/">{$oUser->getLogin()}</a></p>
+	<p class="info-short">{$aLang.topic_pub} <a href="{router page='archive'}{date_format format="Y" date=$oTopic->getDateAdd()}/{date_format format="m" date=$oTopic->getDateAdd()}/{date_format format="d" date=$oTopic->getDateAdd()}/" class="title-topic" title="{date_format date=$oTopic->getDateAdd() format="H:i"}">{date_format date=$oTopic->getDateAdd() format="j F Y"}</a> {$aLang.topic_by} <a href="{router page='my'}{$oUser->getLogin()}/">{$oUser->getLogin()}</a></p>
 	
 	
 	{if $oUserCurrent}
@@ -77,9 +77,11 @@
 	
 
 	<div class="info">
-		{$aLang.topic_pub_in} <a href="{$oBlog->getUrlFull()}" class="title-blog">{$oBlog->getTitle()|escape:'html'}</a>
+		{if $oBlog->getType()!='personal'}
+			{$aLang.topic_pub_in} <a href="{$oBlog->getUrlFull()}" class="title-blog">{$oBlog->getTitle()|escape:'html'}</a> | 
+		{/if}
 		
-		| {$aLang.topic_tags}: 
+		{$aLang.topic_tags}: 
 		{foreach from=$oTopic->getTagsArray() item=sTag name=tags_list}
 			<a href="{router page='tag'}{$sTag|escape:'html'}/">{$sTag|escape:'html'}</a>{if !$smarty.foreach.tags_list.last}, {/if}
 		{/foreach}	
