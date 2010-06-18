@@ -4,7 +4,7 @@
 
 
 <div class="blog">
-	<h2>{$oBlog->getTitle()|escape:'html'}</h2>
+	<h2><img src="{$oBlog->getAvatarPath(24)}" alt="avatar" class="avatar" /> {$oBlog->getTitle()|escape:'html'}</h2>
 	
 	<ul class="actions">
 		<li><a href="{router page='rss'}blog/{$oBlog->getUrl()}/" class="rss">Rss</a></li>

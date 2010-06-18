@@ -15,11 +15,10 @@
 		{$oTalk->getText()}
 	</div>
 
-	<ul class="info">
-		<li class="username"><a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a></li>
-		<li class="date">{date_format date=$oTalk->getDate()}</li>
-		<li><a href="#" onclick="lsFavourite.toggle({$oTalk->getId()},this,'talk'); return false;" class="favorite {if $oTalk->getIsFavourite()}active{/if}"></a></li>
-	</ul>
+	<div class="info">
+		<a href="{$oUser->getUserWebPath()}">{$oUser->getLogin()}</a> |
+		{date_format date=$oTalk->getDate()}
+	</div>
 </div>
 
 {assign var="oTalkUser" value=$oTalk->getTalkUser()}
