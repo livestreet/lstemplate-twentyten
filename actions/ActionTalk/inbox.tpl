@@ -9,8 +9,7 @@
 		<thead>
 			<tr>
 				<td width="20"><input type="checkbox" name="" onclick="checkAllTalk(this);"></td>
-				<td width="150">{$aLang.talk_inbox_target}</td>
-				<td width="20"></td>
+				<td width="150">{$aLang.talk_inbox_target}</td>				
 				<td>{$aLang.talk_inbox_title}</td>
 				<td width="170" align="center">{$aLang.talk_inbox_date}</td>
 			</tr>
@@ -28,10 +27,7 @@
 							<a href="{$oUser->getUserWebPath()}" class="user {if $oTalkUser->getUserActive()!=$TALK_USER_ACTIVE}inactive{/if}">{$oUser->getLogin()}</a>
 						{/if}
 					{/foreach}
-				</td>
-				<td align="center">
-					<a href="#" onclick="lsFavourite.toggle({$oTalk->getId()},this,'talk'); return false;" class="favorite {if $oTalk->getIsFavourite()}active{/if}"></a>
-				</td>
+				</td>				
 				<td>
 					{if $oTalkUserAuthor->getCommentCountNew() or !$oTalkUserAuthor->getDateLast()}
 						<a href="{router page='talk'}read/{$oTalk->getId()}/"><strong>{$oTalk->getTitle()|escape:'html'}</strong></a>
