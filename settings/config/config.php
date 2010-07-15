@@ -14,12 +14,12 @@ $config['head']['default']['js']  = array(
 	"___path.static.skin___/js/other.js",	
 	"___path.static.skin___/js/panel.js",	
 );
-$config['head']['default']['css'] = array(
-	"___path.root.engine_lib___/external/prettify/prettify.css",
+$config['head']['default']['css'] = array(	
 	"___path.static.skin___/css/style.css",
 	"___path.static.skin___/css/roar.css",
 	"___path.static.skin___/css/autocompleter.css",
 	"___path.static.skin___/css/vlacal.css",
+	"___path.root.engine_lib___/external/prettify/prettify.css",
 );
 
 return $config;
