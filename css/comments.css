@@ -1,0 +1,53 @@
+/* Update button */
+.update { padding: 7px 7px 6px 7px; float: right; position: fixed; top: 220px; right: 0; text-align: center; background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #ddd; border-left: 1px solid #ddd; _position: absolute; _top: expression( eval(document.documentElement.scrollTop) + 220 +"px" ); }
+.update .update-comments { width: 16px; height: 16px; cursor: pointer; background: url(../images/update.gif) no-repeat; }
+.update .update-comments.active { background: url(../images/update_act.gif) no-repeat; }
+.update .new-comments { border-top: 1px solid #ececed; color: #333; padding-top: 7px; margin-top: 3px; cursor: pointer; }
+
+
+/* Comments */
+.comments-header { margin-bottom: 20px; }
+.comments-header h3 { font-size: 24px; font-weight: bold; color: #333; }
+.comments-header .rss { background: url(../images/feed.png) no-repeat 0 4px; padding-left: 14px; color: #390; margin-right: 10px; }
+
+.comments { margin-bottom: 10px;  }
+.comments .comment-wrapper { overflow: hidden; zoom: 1; position: relative; }
+.comments .comment-wrapper .comment-wrapper { padding-left: 25px; }
+
+.comment-preview { padding: 5px 10px; margin-bottom: 5px; font: 16px/1.4 Georgia, serif; color: #444; background: #fafafa; overflow: hidden; zoom: 1; }
+
+/* Comment */
+.comment { margin-bottom: 25px; padding-left: 50px; position: relative; }
+.comment .deleted { padding: 5px 10px; color: #777; background: #f4f4f4; }
+.comment .goto-comment-child { display: none; }
+.comment .avatar { position: absolute; top: 0; left: 0; }
+
+/* Comment Highlights */
+.comment 					.info	{ background: #fff; }
+.comment.deleted 			.info	{ background: #efd5d5; }
+.comment.deleted.not-admin 	.info 	{ padding: 5px 10px; min-height: 0; background: #f7f7f7; color: #888; }
+.comment.self 				.info	{ background: #faf8f4; }
+.comment.new 				.info	{ background: #fbfba8; }
+.comment.current 			.info	{ background: #a5e7fa; }
+
+/* Info Block */
+.comment .info { overflow: hidden; zoom: 1; font-size: 11px; }
+.comment .info .username { font: italic 16px/1 Georgia, serif; color: #444; }
+.comment .info .username a { font-weight: bold; font-style: normal; }
+.comment .info .date { font-size: 12px; color: #888; padding: 3px 0 0; }
+
+/* Content */
+.comment .content { font: 16px/1.4 Georgia, serif; color: #444; padding: 10px 0; }
+
+/* Actions */
+.comment .actions { font-size: 11px; font-family: Georgia, serif; }
+.comment .actions a {  }
+
+/* Comment List */
+.comments.comment-list .path { padding-top: 2px; padding-bottom: 3px; font: 12px Georgia, serif; }
+.comments.comment-list .path .blog-name { color: #777; }
+
+/* Reply Form */
+.reply { padding-bottom: 10px; }
+.reply textarea { height: 70px; }
+.reply textarea.loader { background: #f7f7f7 url(../images/loader.gif) no-repeat center;}

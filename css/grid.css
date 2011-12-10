@@ -1,0 +1,114 @@
+/* Blocks
+-------------------- */
+#container 	{ width: 960px; margin: 20px auto; padding: 20px; background: #fff; }
+#header 	{ overflow: hidden; zoom: 1; padding-top: 10px; }
+#image 		{ height: 150px; background: url(../images/bg.jpg) no-repeat; border-top: 4px solid #000; }
+#wrapper 	{ overflow: hidden; zoom: 1; width: 960px; }
+#content 	{ width: 660px; float: left; padding: 40px 60px 20px 20px; }
+#sidebar	{ width: 200px; padding: 40px 20px 0 0; float: left; }
+#footer 	{ overflow: hidden; zoom: 1; width: 960px; padding-top: 15px; border-top: 4px solid #000; color: #666; font: 12px/18px Georgia, serif; }
+
+
+
+/* Header
+-------------------- */
+#header h1 { font-size: 30px; line-height: 36px; font-weight: bold; float: left; margin-bottom: 18px; }
+#header h1 a { color: #333; text-decoration: none; }
+#header h2 { float: right; font: italic 12px Georgia, serif; color: #666; margin-top: 16px; padding: 3px; clear: right; position: relative; top: -5px; }
+
+#header a { color: #333; text-decoration: none; }
+
+#nav .pages { clear: both; padding: 0 10px; height: 40px; background: #000; position: relative; z-index: 200; }
+#nav .pages li { float: left; position: relative; }
+#nav .pages li a { display: block; color: #ccc; text-decoration: none; padding: 10px 10px 11px; }
+#nav .pages li a:hover { color: #fff; background: #333; }
+#nav .pages li:hover { background: #333; }
+#nav .pages li.active a { color: #fff; background: #333; }
+#nav .pages ul { width: 180px; position: absolute; top: 39px; left: 0; background: #333; display: none; }
+#nav .pages ul li { float: none; }
+#nav .pages ul ul { left: 100%; top: 0; display: none; border-left: 1px solid #2a2a2a; }
+#nav .pages li:hover > ul { display: block; }
+
+#header .profile { width: 500px; padding: 10px 0 0; color: #777; float: right; text-align: right; text-transform: lowercase; }
+#header .profile .message-new { color: #5fb501; }
+#header .profile .create { color: #f79cf3; }
+#header .profile .username { font-weight: bold; }
+#header .profile a:hover { color: #ddd; }
+
+#header .search { padding-top: 11px; }
+
+
+
+/* Navigation
+-------------------- */
+#menu { height: 51px; padding: 10px 30px 10px 15px; background: #fafafa; margin: 0 0 30px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+
+/* Menu */
+#menu .menu { padding-bottom: 25px; }
+#menu .menu li { float: left; color: #777; padding: 3px 7px 4px 7px; background: #eee; margin-right: 5px; }
+#menu .menu li a.new { color: #390; }
+#menu .menu li a { text-decoration: none; color: #777; }
+#menu .menu li.active { position: relative; background: #333; }
+#menu .menu li.active a { color: #fff; }
+
+/* Sub-menu */
+#menu .sub-menu { position: absolute; top: 30px; left: 0; width: 400px; font-size: 11px; }
+#menu .sub-menu li { margin-right: 5px; line-height: 12px; background: #eee; padding: 3px 5px 5px 5px !important; }
+#menu .sub-menu li a { color: #777 !important; }
+#menu .sub-menu li a:hover { color: #333; }
+#menu .sub-menu li.active { background: #555; color: #fff; }
+#menu .sub-menu li.active a { color: #fff !important; }
+
+
+
+/* Misc blocks
+-------------------- */
+.tag-search { padding: 20px; background: #fafafa; }
+.tag-search input { width: 300px; padding: 6px 7px; border: 1px solid #ddd; font-family: Georgia, serif; color: #888; }
+
+/* Author Info Block */
+.author-info { min-height: 70px; border-top: 3px solid #000; padding: 15px 15px 15px 100px; background: #f2f7fc; margin-bottom: 15px; font: 14px/20px Georgia, serif; position: relative; }
+.author-info .avatar { position: absolute; top: 15px; left: 15px; padding: 10px; background: #fff; border: 1px solid #eee; }
+
+/* Blog profile */
+.blog { border-top: 3px solid #000; padding: 15px; background: #f2f7fc; margin-bottom: 15px; }
+.blog p { font: 14px/20px Georgia, serif; margin: 0; }
+
+/* User profile */
+.user-profile { padding: 15px; background: #fafafa; margin-bottom: 20px; }
+.user-profile .voting { float: right; margin-right: 10px; }
+.user-profile .strength { float: right; }
+
+/* Stat */
+.stat-performance { width: 910px; margin: 0 auto 20px; padding: 15px 20px; background: #fff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.stat-performance table { }
+.stat-performance table td { width: 200px; vertical-align: top; }
+.stat-performance h4 { font-weight: bold; }
+
+/* Userfeed */
+.userfeed-get-more {display:block; width:90%; margin:0px auto; text-align:center; height:2.5em; padding-top:1em;}
+.userfeed-get-more:hover { background: #f0f7fd;}
+.userfeed_loading {background: #F7F7F7 url(../images/loader.gif) no-repeat center;}
+
+/* Stream */
+.stream-get-more { display: block; text-align: center; padding: 12px 0; background: #fafafa; color: #aaa; border-top: 1px solid #eee; text-decoration: none; }
+.stream-get-more:hover { background: #f0f7fd; }
+.stream_loading { background: #f7f7f7 url(../images/loader.gif) no-repeat center; }
+.stream-comment-preview { padding: 5px 10px; background: #f3f3f3; margin-top: 5px; }
+
+.stream-list { margin: 0 0 20px; }
+.stream-list li { margin-bottom: 5px; min-height: 48px; _height: 48px; background: #fafafa; padding: 10px 15px 10px 70px; position: relative; }
+.stream-list li .avatar { position: absolute; top: 10px; left: 10px; }
+.stream-list li .date { display: block; color: #999; }
+.stream-list li a { text-decoration: none; }
+.stream-list li a:hover { text-decoration: underline; }
+
+/* Userfields */
+.userfield-list { width: 450px; }
+.userfield-list li { background: #f7f7f7; margin-bottom: 1px; padding: 10px 5px; overflow: hidden; zoom: 1; line-height: 12px; color: #777; }
+.userfield-list li .uf-actions { float: right; }
+.userfield-list li .uf-actions img { vertical-align: top; }
+.userfield-list li .userfield_admin_name { font-weight: bold; color: #333; }
+
+.userfield-add { text-decoration: none; border-bottom: 1px dashed #70AAE0; }
+.userfield-add:hover { color: #333; border-color: #333; }

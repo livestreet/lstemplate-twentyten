@@ -1,0 +1,26 @@
+body { 
+	font: 12px/18px Arial, Sans-Serif; 
+	color: #333; 
+	background: #f1f1f1;
+}
+
+h1, h2, h3, h4, h5, h6 { font: normal 18px Arial, Sans-Serif; color: #333; }
+h1 { font-size: 22px; line-height: 26px; margin-bottom: 10px; }
+h2 { font-size: 24px; line-height: 26px; margin-bottom: 7px; font-weight: bold; }
+h3 { font-size: 18px; line-height: 22px; margin-bottom: 5px; }
+h4 { font-size: 14px; line-height: 18px; margin-bottom: 15px; font-weight: bold; }
+h5 { font-size: 16px; line-height: 20px; margin-bottom: 5px; }
+h6 { font-size: 16px; line-height: 20px; margin-bottom: 5px; }
+
+h4 span { font: normal 16px Georgia, serif; font-style: italic; color: #999; }
+
+a 			{ color: #0066cc; }
+a:hover 	{ color: #333; }
+
+p { margin-bottom: 18px; }
+
+
+
+
+
+
